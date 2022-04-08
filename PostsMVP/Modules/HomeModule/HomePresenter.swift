@@ -15,10 +15,13 @@ protocol HomePresenterProtocol: AnyObject {
 }
 
 class HomePresenter: HomePresenterProtocol {
+    
+    //Properties
     weak var view: HomeViewProtocol?
     let networkService: NetworkService?
     var posts: [Post]?
     
+    //Init
     required init(view: HomeViewProtocol, networkService: NetworkService) {
         self.view = view
         self.networkService = networkService
@@ -26,6 +29,7 @@ class HomePresenter: HomePresenterProtocol {
         getPosts()
     }
     
+    //Methods
     func getPosts() {
         networkService?.getPosts { [weak self] result in
             guard let self = self else { return }

@@ -10,8 +10,10 @@ import UIKit
 
 class HomeTableViewCell: UITableViewCell {
     
+    //Properties
     static let identifier = "HomeTableViewCell"
     
+    //Views
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 2
@@ -38,6 +40,7 @@ class HomeTableViewCell: UITableViewCell {
         return stack
     }()
     
+    //Init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -51,6 +54,7 @@ class HomeTableViewCell: UITableViewCell {
     
 }
 
+//MARK: - Configure & setup cell
 extension HomeTableViewCell {
     func configure(with title: String?) {
         titleLabel.text = title

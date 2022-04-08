@@ -14,8 +14,10 @@ protocol HomeViewProtocol: AnyObject {
 
 final class HomeViewController: UIViewController {
     
+    //Properties
     var presenter: HomePresenterProtocol?
     
+    //Views
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.delegate = self
@@ -25,6 +27,7 @@ final class HomeViewController: UIViewController {
         return tableView
     }()
     
+    //Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,6 +37,8 @@ final class HomeViewController: UIViewController {
     
     
 }
+
+//MARK: - Setup views
 
 extension HomeViewController {
     private func setupViews() {

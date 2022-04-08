@@ -26,7 +26,7 @@ class NetworkService: NetworkServiceProtocol {
             guard let data = data else {
                 return
             }
-
+            
             do {
                 let decodedData = try JSONDecoder().decode([Post].self, from: data)
                 completion(.success(decodedData))
@@ -36,6 +36,5 @@ class NetworkService: NetworkServiceProtocol {
         }
         task.resume()
     }
-    
     
 }
