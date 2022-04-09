@@ -22,5 +22,4 @@ final class AssemblyModuleBuilder: AssemblyModuleBuilderProtocol {
         return view
     }
     
-    
 }

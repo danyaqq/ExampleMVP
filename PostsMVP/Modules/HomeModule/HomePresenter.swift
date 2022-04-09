@@ -8,7 +8,7 @@
 import Foundation
 
 protocol HomePresenterProtocol: AnyObject {
-    init(view: HomeViewProtocol, networkService: NetworkService)
+    init(view: HomeViewProtocol, networkService: NetworkServiceProtocol)
     var posts: [Post]? { get set }
     func getPosts()
     func goToDetail(post: Post?)
@@ -18,11 +18,11 @@ class HomePresenter: HomePresenterProtocol {
     
     //Properties
     weak var view: HomeViewProtocol?
-    let networkService: NetworkService?
+    let networkService: NetworkServiceProtocol?
     var posts: [Post]?
     
     //Init
-    required init(view: HomeViewProtocol, networkService: NetworkService) {
+    required init(view: HomeViewProtocol, networkService: NetworkServiceProtocol) {
         self.view = view
         self.networkService = networkService
         

@@ -138,11 +138,11 @@ class HomePresenter: HomePresenterProtocol {
     
     //Properties
     weak var view: HomeViewProtocol?
-    let networkService: NetworkService?
+    let networkService: NetworkServiceProtocol?
     var posts: [Post]?
     
     //Init
-    required init(view: HomeViewProtocol, networkService: NetworkService) {
+    required init(view: HomeViewProtocol, networkService: NetworkServiceProtocol) {
         self.view = view
         self.networkService = networkService
         
