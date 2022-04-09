@@ -128,7 +128,7 @@ extension HomeViewController: HomeViewProtocol {
 
 ```swift
 protocol HomePresenterProtocol: AnyObject {
-    init(view: HomeViewProtocol, networkService: NetworkService)
+    init(view: HomeViewProtocol, networkService: NetworkServiceProtocol)
     var posts: [Post]? { get set }
     func getPosts()
     func goToDetail(post: Post?)
