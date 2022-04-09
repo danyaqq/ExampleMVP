@@ -131,7 +131,6 @@ protocol HomePresenterProtocol: AnyObject {
     init(view: HomeViewProtocol, networkService: NetworkServiceProtocol)
     var posts: [Post]? { get set }
     func getPosts()
-    func goToDetail(post: Post?)
 }
 
 class HomePresenter: HomePresenterProtocol {
@@ -168,8 +167,5 @@ class HomePresenter: HomePresenterProtocol {
         }
     }
     
-    func goToDetail(post: Post?) {
-        
-    }
 }
 ```
