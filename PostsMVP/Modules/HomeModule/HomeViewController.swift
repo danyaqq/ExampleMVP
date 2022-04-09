@@ -81,6 +81,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let post = presenter?.posts?[indexPath.row]
+        let detailVC = AssemblyModuleBuilder.createDetailModule(post: post)
+        detailVC.modalPresentationStyle = .formSheet
+        navigationController?.present(detailVC, animated: true, completion: nil)
     }
 }
 

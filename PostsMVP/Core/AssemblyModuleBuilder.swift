@@ -22,4 +22,11 @@ final class AssemblyModuleBuilder: AssemblyModuleBuilderProtocol {
         return view
     }
     
+    static func createDetailModule(post: Post?) -> UIViewController {
+        let view = DetailViewController()
+        let presenter = DetailPresenter(view: view, post: post)
+        view.presenter = presenter
+        
+        return view
+    }
 }
