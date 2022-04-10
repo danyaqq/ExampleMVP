@@ -10,6 +10,7 @@ import UIKit
 
 protocol AssemblyModuleBuilderProtocol {
     static func createHomeModule() -> UIViewController
+    static func createDetailModule(post: Post?) -> UIViewController
 }
 
 final class AssemblyModuleBuilder: AssemblyModuleBuilderProtocol {
